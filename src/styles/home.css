@@ -1,0 +1,75 @@
+.home-content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 4%;
+}
+
+.hero-text-container {
+    width: 60%;
+    height: max-content;
+    text-align: center;
+    padding: 8rem 5rem 4rem 5rem;
+    line-height: 6rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.hero-text-1 {
+    color: white;
+    font-size: 4.6rem;
+    font-weight: 700;
+    margin-bottom: 2.8rem;
+}
+
+.hero-text-2 {
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 3.2rem;
+}
+
+.hero-text-3 {
+    color: white;
+    font-size: 3.2rem;
+    margin-bottom: 4rem;
+}
+
+.home-fried-rice-bowl {
+    filter: drop-shadow(0 5px 1rem orange);
+    animation: move alternate 800ms ease-in-out infinite;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(-4%);
+    }
+}
+
+#explore-btn {
+    font-size: 2.8rem;
+    font-family: roboto;
+    color: orangered;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    box-shadow: 0 0 8px orangered;
+    transition: all 100ms ease-in-out;
+}
+
+#explore-btn:hover {
+    color: white;
+    background-color: orangered;
+}
+
+#explore-btn:active {
+    color: orangered;
+    background-color: transparent;
+    box-shadow: 0 0 8px orangered;
+}
