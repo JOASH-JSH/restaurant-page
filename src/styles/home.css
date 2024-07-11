@@ -37,7 +37,7 @@
 
 .home-fried-rice-bowl {
     filter: drop-shadow(0 5px 1rem orange);
-    animation: move alternate 800ms ease-in-out infinite;
+    animation: move alternate 800ms 100ms ease-in-out infinite;
 }
 
 @keyframes move {
