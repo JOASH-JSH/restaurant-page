@@ -1,3 +1,5 @@
+import "../styles/home.css";
+
 export function homePageHTML() {
     const imgSrc = require.context("../assets/images", false, /\.webp/);
 

@@ -1,3 +1,5 @@
+import "../styles/menu.css";
+
 export function menuPageHTML() {
     const imgSrc = require.context("../assets/images/", false, /\.webp/);
 

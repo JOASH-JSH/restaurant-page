@@ -1,3 +1,5 @@
+import "../styles/about.css";
+
 export function aboutPageHTML() {
     return `
         <div class="about-us-content">

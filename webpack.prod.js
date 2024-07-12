@@ -1,5 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserWebpackPlugin = require("terser-webpack-plugin");
 
 module.exports = {
     mode: "production",
@@ -12,8 +15,16 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html",
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+            },
         }),
+        new MiniCssExtractPlugin({ filename: "index.css" }),
     ],
+    optimization: {
+        minimizer: [new CssMinimizerPlugin(), new TerserWebpackPlugin()],
+    },
     module: {
         rules: [
             {
@@ -22,7 +33,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ["style-loader", "css-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader"],
             },
             {
                 test: /\.(woff2|woff)$/,
@@ -39,7 +50,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.(webp|png|jpg)$/,
+                test: /\.webp$/,
                 type: "asset/resource",
                 generator: {
                     filename: "./assets/images/[name].[hash][ext]",
