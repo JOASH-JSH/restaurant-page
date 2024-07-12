@@ -1,38 +1,57 @@
 .home-content {
+    height: 100%;
+    background-image: url("../assets/images/bg-home.webp");
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+
+.home-content .common-width {
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 4%;
 }
 
 .hero-text-container {
     width: 60%;
     height: max-content;
     text-align: center;
-    padding: 8rem 5rem 4rem 5rem;
+    padding: 6rem 0;
     line-height: 6rem;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 1rem;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .hero-text-1 {
-    color: white;
-    font-size: 4.6rem;
+    color: gold;
+    font-size: 5rem;
     font-weight: 700;
-    margin-bottom: 2.8rem;
+    margin-bottom: 3.6rem;
+    filter: drop-shadow(5px 0 0px white);
+}
+
+.welcome-text {
+    filter: drop-shadow(5px 0 0px red);
+    background-color: orangered;
 }
 
 .hero-text-2 {
-    color: white;
+    width: max-content;
+    color: orangered;
     font-size: 4rem;
-    margin-bottom: 3.2rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+    border-radius: 4px;
+    background: radial-gradient(circle at 50%, gold, white, green);
 }
 
 .hero-text-3 {
     color: white;
     font-size: 3.2rem;
     margin-bottom: 4rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    box-shadow: 0 0 1rem white;
 }
 
 .home-fried-rice-bowl {
@@ -50,26 +69,25 @@
 }
 
 #explore-btn {
-    font-size: 2.8rem;
-    font-family: roboto;
-    color: orangered;
-    background-color: transparent;
+    font-size: 2.4rem;
+    font-family: playwrite-AR;
+    font-weight: bold;
+    color: white;
+    background-color: orangered;
     border: none;
     border-radius: 5px;
-    padding: 1rem 2rem;
+    padding: 2.4rem 3.4rem;
     text-transform: capitalize;
     cursor: pointer;
-    box-shadow: 0 0 8px orangered;
     transition: all 100ms ease-in-out;
 }
 
 #explore-btn:hover {
-    color: white;
-    background-color: orangered;
+    background-color: orange;
 }
 
 #explore-btn:active {
     color: orangered;
-    background-color: transparent;
+    background-color: white;
     box-shadow: 0 0 8px orangered;
 }

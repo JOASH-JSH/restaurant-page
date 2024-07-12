@@ -1,5 +1,7 @@
 @import "./styles/reset.css";
 @import "./styles/home.css";
+@import "./styles/menu.css";
+@import "./styles/about.css";
 
 @font-face {
     font-family: "playwrite-AR";
@@ -11,14 +13,8 @@
     src: url("./assets/fonts/playwrite-AR.woff") format("woff");
 }
 
-@font-face {
-    font-family: "roboto";
-    src: url("./assets/fonts/roboto.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "roboto";
-    src: url("./assets/fonts/roboto.woff") format("woff");
+* {
+    box-sizing: border-box;
 }
 
 html,
@@ -108,16 +104,20 @@ header > div > div:last-child nav button:after {
     content: "";
     width: 0%;
     height: 3px;
-    background-color: white;
+    background-color: red;
     position: absolute;
     left: 0;
     bottom: 0;
     transition: all 300ms ease-in-out;
 }
 
+header > div > div:last-child nav button.clicked::first-letter {
+    color: white;
+}
+
 header > div > div:last-child nav button.clicked::after {
     content: "";
-    width: 100%;
+    width: 50%;
 }
 
 header > div > div:last-child nav button:hover::after {
@@ -130,8 +130,14 @@ header > div > div:last-child nav button:hover::after {
 #content {
     width: 100%;
     height: 100%;
-    background-image: url("./assets/images/background.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* background-image: url("./assets/images/bg.jpg");
+    background-size: contain;
+    background-repeat: repeat-x; */
+}
+
+footer {
+    z-index: 1;
+    width: 100%;
+    height: 12rem;
+    background-color: black;
 }
