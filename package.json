@@ -5,14 +5,17 @@
     "main": "index.js",
     "scripts": {
         "start": "webpack-dev-server --config webpack.dev.js --open",
-        "build": "webpack --config webpack.prod.js"
+        "build": "webpack --config webpack.prod.js",
+        "deploy": "gh-pages -d dist"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
+    "homepage": "https://joash-jsh.github.io",
     "devDependencies": {
         "css-loader": "^7.1.2",
         "css-minimizer-webpack-plugin": "^7.0.0",
+        "gh-pages": "^6.1.1",
         "html-loader": "^5.0.0",
         "html-webpack-plugin": "^5.6.0",
         "mini-css-extract-plugin": "^2.9.0",
