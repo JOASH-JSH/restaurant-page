@@ -1,9 +1,11 @@
-import "../styles/menu.css";
-
 export function menuPageHTML() {
     const imgSrc = require.context("../assets/images/", false, /\.webp/);
 
     const items = [
+        { name: "Chicken fried rice", price: 50 },
+        { name: "Veg fried rice", price: 35 },
+        { name: "Chicken fried rice", price: 50 },
+        { name: "Veg fried rice", price: 35 },
         { name: "Chicken fried rice", price: 50 },
         { name: "Veg fried rice", price: 35 },
         { name: "Chicken fried rice", price: 50 },
@@ -28,11 +30,12 @@ function generateItemHTML(item, imgSrc) {
     return `
         <div class="item">
             <div class="item-image">
-                <img src="${imgSrc(`./${imageName}.webp`)}" width="150"/>
+                <img src="${imgSrc(`./${imageName}.webp`)}" alt="item image" />
             </div>
             <div class="item-price">
                 <p>${item.name}</p>
                 <p>Rs. ${item.price.toFixed(2)}</p>
             </div>
-        </div>`;
+        </div>
+    `;
 }

@@ -1,61 +1,54 @@
 .about-us-content {
-    height: 100%;
-    background-image: url("../assets/images/bg-about.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.about-us-content .common-width {
-    padding-top: 5rem;
-}
-
-.about-us-content h2 {
-    max-width: max-content;
-    color: white;
-    background-color: orangered;
-    font-size: 5rem;
-    font-weight: 700;
-    margin: 0 auto;
-    filter: drop-shadow(5px 0 0 red);
-}
-
-.about-us-text-container {
-    width: 50%;
-    word-wrap: break-word;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 5rem;
-    line-height: 1.8;
-    padding: 4rem 0;
+    align-items: center;
+    gap: 2em;
 }
 
-.about-us-text-container div {
-    width: 80ch;
+.about-us-content > img {
+    width: clamp(120px, 10vw + 1rem, 200px);
+    margin-top: 16vh;
+    margin-bottom: 2vh;
+    animation: updown 2s ease-in-out infinite alternate;
 }
 
-.about-us-text-container div:nth-child(even) {
-    align-self: flex-end;
+.about-us-content div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.8em;
 }
 
-.about-us-text-container h3 {
+.about-us-content h3 {
     width: max-content;
-    font-size: 2.5rem;
+    margin: 0 auto;
+    font-size: clamp(1rem, 1vw + 1rem, 21.2rem);
     font-weight: 700;
     color: black;
-    background-color: whitesmoke;
-    padding: 0.5rem 1rem;
+    background-color: white;
+    text-shadow: clamp(2px, 0.1vw, 6px) 0 0 white;
+    margin-bottom: 0.4em;
 }
 
-.about-us-text-container p {
+.about-us-content p {
     padding: 2rem;
-    font-size: 2.2rem;
+    font-size: clamp(1rem, 1vw + 0.5rem, 21.2rem);
     color: white;
-    background-color: rgba(0, 0, 0, 0.4);
-    background: linear-gradient(to bottom right, purple, orangered);
-    border-radius: 0 10px 15px 5px;
-    border-top: 1px solid white;
-    border-bottom: 4px solid white;
-    border-left: 1px solid white;
-    border-right: 4px solid white;
+    text-align: center;
+    line-height: 1.8;
+}
+
+@media (max-width: 620px) {
+    .about-us-content p {
+        width: 45ch;
+    }
+}
+
+@media (max-width: 425px) {
+    .about-us-content p {
+        width: 30ch;
+    }
 }

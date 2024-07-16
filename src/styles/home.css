@@ -1,90 +1,84 @@
-
 .home-content {
     height: 100%;
-    background-image: url("../assets/images/bg-home.webp");
-    background-size: contain;
-    background-repeat: repeat-x;
 }
 
-.home-content .common-width {
-    display: flex;
-    justify-content: center;
-}
-
-.hero-text-container {
-    width: 110rem;
-    height: max-content;
+.home-content > div {
+    width: 100%;
     text-align: center;
-    padding: 6rem 0;
-    line-height: 6rem;
 }
+
+.home-content > div:nth-child(2) {
+    font-size: clamp(2.2rem, 2vw + 1rem, 5rem);
+    background-color: rgba(255, 255, 255, 0.225);
+    padding: 1em 0 0.5em 0;
+    box-shadow: 0 4px 10px white;
+    margin-bottom: 1em;
+}
+
+.home-content > div:nth-child(3) {
+    font-size: clamp(1.4rem, 1.5vw + 1rem, 4rem);
+}
+
+.home-content > div:nth-child(4) {
+    font-size: clamp(1.25rem, 1vw + 0.5rem, 2.5rem);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1.5em 0 1em 0;
+    margin-bottom: 2em;
+}
+
+.home-content > div:nth-child(5) {
+    font-size: clamp(1rem, 1vw + 1rem, 2rem);
+}
+
+.hero-chef-image {
+    width: clamp(120px, 10vw + 1rem, 200px);
+    margin-top: 16vh;
+    margin-bottom: 2vh;
+    animation: updown 2s ease-in-out infinite alternate;
+}
+
+
 
 .hero-text-1 {
-    color: gold;
-    font-size: 5rem;
+    width: max-content;
+    color: white;
     font-weight: 700;
-    margin-bottom: 3.6rem;
-    filter: drop-shadow(5px 0 0px white);
-}
-
-.welcome-text {
-    filter: drop-shadow(5px 0 0px red);
-    background-color: orangered;
+    text-shadow: clamp(2px, 0.3vw, 6px) 0 0 #4050e0;
+    border-bottom: 0.1em solid red;
+    margin: 0 auto;
 }
 
 .hero-text-2 {
     width: max-content;
+    font-weight: 700;
     color: orangered;
-    font-size: 4rem;
-    font-weight: bold;
-    font-style: italic;
+    background-color: white;
+    letter-spacing: 2px;
+    text-shadow: clamp(1px, 0.15vw, 3px) 0 0 white;
+    padding: 0 0.5em;
     margin: 0 auto;
-    margin-bottom: 3rem;
-    padding: 0 1rem;
-    border-radius: 4px;
-    background: radial-gradient(circle at 50%, gold, white, green);
 }
 
 .hero-text-3 {
+    width: 55ch;
     color: white;
-    font-size: 3.2rem;
-    margin-bottom: 4rem;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 1rem;
-    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
-    box-shadow: 0 0 1rem white;
-}
-
-.home-fried-rice-bowl {
-    filter: drop-shadow(0 5px 1rem orange);
-    animation: move alternate 800ms 100ms ease-in-out infinite;
-}
-
-@keyframes move {
-    from {
-        transform: translateY(0%);
-    }
-    to {
-        transform: translateY(-4%);
-    }
+    line-height: 1.8;
+    text-align: center;
+    margin: auto;
 }
 
 #explore-btn {
-    font-size: 2.4rem;
+    font-size: 1em;
     font-family: playwrite-AR;
     font-weight: bold;
     color: white;
     background-color: orangered;
     border: none;
-    border-radius: 5px;
-    padding: 2.4rem 3.4rem;
+    border-radius: clamp(2px, 0.4vw, 4px);
+    padding: 1em 1.5em;
     text-transform: capitalize;
     cursor: pointer;
-    transition: all 100ms ease-in-out;
-}
-
-#explore-btn:hover {
-    background-color: orange;
+    transition: all 50ms ease-in-out;
 }
 
 #explore-btn:active {
@@ -93,3 +87,14 @@
     box-shadow: 0 0 8px orangered;
 }
 
+@media (max-width: 620px) {
+    .hero-text-3 {
+        width: 45ch;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero-text-3 {
+        width: 30ch;
+    }
+}
