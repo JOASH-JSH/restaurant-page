@@ -1,3 +1,6 @@
+"use strict";
+
+// Returns "Menu" page HTML
 export function menuPageHTML() {
     const imgSrc = require.context("../assets/images/", false, /\.webp/);
 
@@ -24,6 +27,7 @@ export function menuPageHTML() {
     `;
 }
 
+// Generate "item div" for each item
 function generateItemHTML(item, imgSrc) {
     const imageName = item.name.toLowerCase().split(" ").join("-");
 

@@ -7,7 +7,7 @@
     text-align: center;
 }
 
-.home-content > div:nth-child(2) {
+.home-content-div-2 {
     font-size: clamp(2.2rem, 2vw + 1rem, 5rem);
     background-color: rgba(255, 255, 255, 0.225);
     padding: 1em 0 0.5em 0;
@@ -15,31 +15,30 @@
     margin-bottom: 1em;
 }
 
-.home-content > div:nth-child(3) {
+.home-content-div-3 {
     font-size: clamp(1.4rem, 1.5vw + 1rem, 4rem);
 }
 
-.home-content > div:nth-child(4) {
+.home-content-div-4 {
     font-size: clamp(1.25rem, 1vw + 0.5rem, 2.5rem);
     background-color: rgba(0, 0, 0, 0.6);
     padding: 1.5em 0 1em 0;
     margin-bottom: 2em;
 }
 
-.home-content > div:nth-child(5) {
+.home-content-div-5 {
     font-size: clamp(1rem, 1vw + 1rem, 2rem);
 }
 
-.hero-chef-image {
+.home-chef-image {
     width: clamp(120px, 10vw + 1rem, 200px);
+    filter: drop-shadow(0.2em 0 0.2em orangered);
     margin-top: 16vh;
     margin-bottom: 2vh;
     animation: updown 2s ease-in-out infinite alternate;
 }
 
-
-
-.hero-text-1 {
+.home-text-1 {
     width: max-content;
     color: white;
     font-weight: 700;
@@ -48,7 +47,7 @@
     margin: 0 auto;
 }
 
-.hero-text-2 {
+.home-text-2 {
     width: max-content;
     font-weight: 700;
     color: orangered;
@@ -59,7 +58,7 @@
     margin: 0 auto;
 }
 
-.hero-text-3 {
+.home-text-3 {
     width: 55ch;
     color: white;
     line-height: 1.8;
@@ -88,13 +87,13 @@
 }
 
 @media (max-width: 620px) {
-    .hero-text-3 {
+    .home-text-3 {
         width: 45ch;
     }
 }
 
 @media (max-width: 425px) {
-    .hero-text-3 {
+    .home-text-3 {
         width: 30ch;
     }
 }

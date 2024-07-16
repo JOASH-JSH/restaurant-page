@@ -1,9 +1,12 @@
+"use strict";
+
+// Returns "About" page HTML
 export function aboutPageHTML() {
     const imgSrc = require.context("../assets/images", false, /\.(webp|png|jpg)/);
 
     return `
         <div class="about-us-content common-width">
-            <img src="${imgSrc(`./chef-2.webp`)}" alt="item image"/>
+            <img class="about-chef-image" src="${imgSrc(`./chef-2.webp`)}" alt="chef image"/>
             <div>
                 <h3>Our Mission</h3>
                 <p>
@@ -17,10 +20,8 @@ export function aboutPageHTML() {
             </div>
             <div>
                 <h3>Contact Us</h3>
-                <p>
-                    Phone: (123) 000 1112 </br>
-                    Email: contact@ricedelightful.com
-                </p>  
+                <p>Phone: (123) 000 1112</p>  
+                <p>Email: contact@ricedelightful.com</p>  
             </div>
         </div>
     `;
